@@ -2,9 +2,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { StyledComponentsRegistry } from "shared/lib/StyledComponentsRegistry";
+import { QueryProvider, StyledComponentsRegistry } from "shared/lib";
 
-import { QueryProvider } from "../shared/lib/QueryProvider";
 import { GlobalStyle } from "./GlobalStyles";
 import { ResetStyle } from "./ResetStyle";
 
