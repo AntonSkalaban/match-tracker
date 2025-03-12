@@ -1,4 +1,4 @@
 export * from "./Alert";
-export * from "./Card";
+export * from "./CardItem";
 export * from "./styled";
-export * from "./Card/styled";
+export * from "./CardItem/styled";

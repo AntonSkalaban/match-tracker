@@ -20,7 +20,7 @@ import {
 import { TeamInfo } from "./TeamInfo";
 import { CardProps } from "./types";
 
-export const Card: FC<CardProps> = ({ matchData }) => {
+export const CardItem: FC<CardProps> = ({ matchData }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { homeTeam, awayTeam, status } = matchData;
