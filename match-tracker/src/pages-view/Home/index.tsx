@@ -3,9 +3,10 @@ import { FC } from "react";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 
+import { RefreshButton } from "feature";
 import { CardsList, CardsListSkeleton } from "widgets";
 import { getData } from "shared/api";
-import { Alert, RefreshButton, Wrapper } from "shared/ui";
+import { Alert, Wrapper } from "shared/ui";
 
 import Logo from "./assets/logo.svg";
 import { ButtonContainer, HeaderContent, LogoImageContainer } from "./styled";
