@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { StyledCardSkeleton } from "shared/ui/Card/styled";
+import { StyledCardSkeleton } from "shared/ui";
 
 export const CardsListSkeleton: FC = () => {
   return (

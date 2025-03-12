@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 
-import { Card } from "shared/ui/Card";
+import { Card } from "shared/ui";
 
 import { CardsListProps } from "./types";
 
