@@ -1,4 +1,4 @@
-import { Team } from "shared/ui/types";
+import { Team } from "shared/types";
 
 export interface TeamInfoProps {
   team: Team;

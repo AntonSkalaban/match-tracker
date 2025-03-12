@@ -5,12 +5,7 @@ const compat = new FlatCompat({
 });
 const eslintConfig = [
   ...compat.config({
-    extends: [
-      "next",
-      "next/typescript",
-      "prettier",
-      "plugin:prettier/recommended",
-    ],
+    extends: ["next", "next/typescript", "prettier", "plugin:prettier/recommended"],
     plugins: ["simple-import-sort"],
     rules: {
       "simple-import-sort/imports": [
@@ -22,7 +17,7 @@ const eslintConfig = [
               "^@?\\w",
               "^(api)(/.*|$)",
               "^(app)(/.*|$)",
-              "^(pages)(/.*|$)",
+              "^(pages-view)(/.*|$)",
               "^(widgets)(/.*|$)",
               "^(features)(/.*|$)",
               "^(entities)(/.*|$)",

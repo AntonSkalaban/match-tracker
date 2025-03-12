@@ -2,22 +2,22 @@ import { styled } from "styled-components";
 import { flex } from "shared/ui/styled";
 
 export const TextContainer = styled.div`
-  ${flex({ jc: "start", g: 8 })}
+  ${flex({ jc: "start", g: "var(--space-4)" })}
 `;
 
 export const StyledTeamInfo = styled.div`
-  width: 50%;
+  width: 100%;
   padding-top: 32px;
 `;
 
 export const CardBlock = styled.div`
   width: 100%;
-  ${flex({ jc: "start", g: 8 })}
+  ${flex({ jc: "start", g: "var(--space-4)" })}
 
-  padding: 8px 24px;
+  padding: var(--space-4) var(--space-10);
 
-  background: #101318;
-  border-radius: 4px;
+  background: var(--deep-dark-grey);
+  border-radius: var(--border-radius-1);
 `;
 
 export const TopRow = styled(CardBlock)`
@@ -30,7 +30,7 @@ export const TopItem = styled.div`
 
 export const PlayerTitleContainer = styled.div`
   width: 150px;
-  ${flex({ jc: "start", g: 8 })}
+  ${flex({ jc: "start", g: "var(--space-4)" })}
 `;
 
 export const PlayerAvatarContainer = styled.div`
@@ -39,12 +39,12 @@ export const PlayerAvatarContainer = styled.div`
 `;
 
 export const BottomRow = styled(CardBlock)`
-  ${flex({ g: 16 })}
+  ${flex({ g: "var(--space-8)" })}
 
-  margin-top: 8px;
+  margin-top: var(--space-4);
 `;
 
 export const BottomItem = styled.div`
-  width: 100%;
-  ${flex({})}
+  width: 264px;
+  ${flex({ jc: "center" })}
 `;

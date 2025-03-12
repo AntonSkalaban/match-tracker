@@ -1,17 +1,22 @@
 import { styled } from "styled-components";
 
-import { bordersRadius, flex, StyledH2 } from "../styled";
+import { flex, StyledH2 } from "../styled";
 
 export const StyledCard = styled.div`
   height: auto;
-  padding: 16px;
-  background: #0b0e12;
-  border-radius: ${bordersRadius[1]};
-  margin-top: 8px;
+  padding: var(--space-8);
+  background: var(--dark-blue-black);
+  border-radius: var(--border-radius-1);
+  margin-top: var(--space-4);
+`;
+
+export const StyledCardSkeleton = styled(StyledCard)`
+  height: 91px;
+  background: var(--skeleton-gradient);
 `;
 
 export const CardHeader = styled.div`
-  ${flex({ g: 12 })}
+  ${flex({ g: "var(--space-6)" })}
   cursor: pointer;
 `;
 
@@ -22,15 +27,21 @@ export const HeaderContent = styled.div`
 
 export const CardBody = styled.div<{ $isOpen: boolean }>`
   width: 100%;
-  ${flex({ g: 32 })}
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-12);
 
   transition: max-height 0.3s ease;
-  max-height: ${(props) => (props.$isOpen ? `140px` : "0")};
+  max-height: ${({ $isOpen }) => ($isOpen ? `300px` : "0")};
   overflow: hidden;
+
+  @media (max-width: 1800px) {
+    ${flex({ g: 0, fd: "column" })}
+  }
 `;
 
 export const TeamTitleBlock = styled.div`
-  ${flex({ g: 14 })}
+  ${flex({ g: "var(--space-7)" })}
 `;
 
 export const TeamAvatarContainer = styled.div`
@@ -43,16 +54,18 @@ export const ArrowIconContainer = styled.div<{ $isOpen: boolean }>`
   height: 16px;
 
   transition: transform 0.3s ease;
-  ${(props) => (props.$isOpen ? `transform: rotate(180deg);` : "")};
+  ${({ $isOpen }) => ($isOpen ? `transform: rotate(180deg);` : "")};
 `;
 
 export const StatusContainer = styled.div<{ $color?: string }>`
+  min-width: 92px;
   ${flex({ jc: "center" })}
 
-  padding: 6px 2px;
+  padding: var(--space-3) var(--space-1);
 
-  background: ${(props) => props.$color};
+  background: var(--${(props) => props.$color});
   border-radius: 4px;
+  margin-top: 4px;
 `;
 
 export const StatusTitle = styled(StyledH2)`

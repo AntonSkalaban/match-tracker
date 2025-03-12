@@ -1,29 +1,16 @@
 "use client";
 import { FC } from "react";
-import { useQuery } from "@tanstack/react-query";
 
-import { Card } from "shared/ui/card";
-import { MatchesResponse } from "shared/ui/types";
+import { Card } from "shared/ui/Card";
 
-const baseUrl = "https://app.ftoyd.com/fronttemp-service";
+import { CardsListProps } from "./types";
 
-export const CardsList: FC = () => {
-  const { isPending, error, data } = useQuery({
-    queryKey: ["fronttemp"],
-    queryFn: () => fetch(baseUrl + "/fronttemp").then((res) => res.json()),
-  });
-
-  if (isPending) return "Loading...";
-
-  if (error) return "An error has occurred: " + error.message;
-
-  if (!data.ok) return "An error";
-
+export const CardsList: FC<CardsListProps> = ({ matches }) => {
   return (
-    <>
-      {(data as MatchesResponse).data.matches.map((data) => (
+    <div>
+      {matches.map((data) => (
         <Card key={data.title} matchData={data} />
       ))}
-    </>
+    </div>
   );
 };

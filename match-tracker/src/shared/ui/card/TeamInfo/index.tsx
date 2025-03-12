@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { StyledH3, StyledParagraphMedium } from "shared/ui/styled";
+import { StyledH3, StyledParagraphMedium } from "shared/ui/styled/styled";
 
 import PlayerAvatar from "./assets/playerAvatar.png";
 import {

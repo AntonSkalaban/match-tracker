@@ -1,3 +1,7 @@
+"use client";
+import { createGlobalStyle } from "styled-components";
+
+export const ResetStyle = createGlobalStyle`
 *,
 *::before,
 *::after {
@@ -73,3 +77,4 @@ button {
     scroll-behavior: auto !important;
   }
 }
+`;

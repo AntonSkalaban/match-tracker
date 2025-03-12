@@ -21,7 +21,7 @@
    "baseUrl": "./src",
     "paths": {
       "app/*": ["app/*"],
-      "pages/*": ["pages/*"],
+      "pages/*": ["pages-view/*"],
       "widgets/*": ["widgets/*"],
       "features/*": ["features/*"],
       "entities/*": ["entities/*"],

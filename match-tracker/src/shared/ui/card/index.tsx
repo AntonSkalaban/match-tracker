@@ -1,10 +1,10 @@
 "use client";
-import { FC, useRef, useState } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 
 import Arrow from "./assets/arrow.svg";
 import TeamAvatar from "./assets/team.png";
-import { StyledH2, StyledParagraphSmall } from "../styled";
+import { StyledH2, StyledParagraphSmall } from "../styled/styled";
 import { statusData } from "./constants";
 import {
   ArrowIconContainer,
@@ -22,17 +22,16 @@ import { CardProps } from "./types";
 
 export const Card: FC<CardProps> = ({ matchData }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+
+  const { homeTeam, awayTeam, status } = matchData;
+  const { bgColor, title } = statusData[status];
 
   const toggle = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const { homeTeam, awayTeam, status } = matchData;
-  const { bgColor, title } = statusData[status];
-
   return (
-    <StyledCard ref={cardRef}>
+    <StyledCard>
       <CardHeader onClick={toggle}>
         <HeaderContent>
           <TeamTitleBlock>
