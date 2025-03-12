@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Arrow from "./assets/arrow.svg";
 import TeamAvatar from "./assets/team.png";
-import { StyledH2, StyledParagraphSmall } from "../styled/styled";
+import { StyledH2, StyledParagraphSmall } from "../styled";
 import { statusData } from "./constants";
 import {
   ArrowIconContainer,
